@@ -13,67 +13,109 @@
 <body class="bg-gradient-to-b from-[#0a192f] via-[#0f2544] to-[#091e32] text-white font-sans">
 
   <!-- Navbar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a192f]/70 backdrop-blur-lg shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="text-2xl font-bold text-white tracking-tight hover:scale-110 transform transition duration-300">
-          DL
-        </div>
-        <div class="hidden md:flex space-x-6">
-          <a href="#inicio" class="relative text-white font-semibold hover:text-indigo-300 group">
-            <span class="group-hover:translate-y-[-2px] inline-block transition">Inicio</span>
-            <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-400 group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#proyectos" class="relative text-white font-semibold hover:text-indigo-300 group">Proyectos</a>
-          <a href="#skills" class="relative text-white font-semibold hover:text-indigo-300 group">Skills</a>
-        </div>
-        <div class="flex items-center space-x-2">
-          <img src="https://flagpedia.net/data/flags/h160/cr.webp" alt="ES" class="w-5 h-5" />
-          <span class="text-sm">Costa Rica</span>
-        </div>
+ <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a192f]/70 backdrop-blur-lg shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-white tracking-tight hover:scale-110 transform transition duration-300">
+        DL
+      </div>
+
+      <!-- Menú en pantallas grandes -->
+      <div class="hidden md:flex space-x-6">
+        <a href="#inicio" class="relative text-white font-semibold hover:text-indigo-300 group">
+          <span class="group-hover:translate-y-[-2px] inline-block transition">Inicio</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-400 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#skills" class="relative text-white font-semibold hover:text-indigo-300 group">Skills</a>
+        <a href="#estudios" class="relative text-white font-semibold hover:text-indigo-300 group">Estudios</a>
+        <a href="#proyectos" class="relative text-white font-semibold hover:text-indigo-300 group">Proyectos</a>
+        
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <button id="menuToggle" class="md:hidden text-white text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- País -->
+      <div class="hidden sm:flex items-center space-x-2">
+        <img src="https://flagpedia.net/data/flags/h160/cr.webp" alt="ES" class="w-5 h-5" />
+        <span class="text-sm">Costa Rica</span>
       </div>
     </div>
-  </nav>
+  </div>
+
+  <!-- Menú móvil (solo uno, y fuera del div .h-16) -->
+    <div id="mobileMenu" class="md:hidden hidden flex flex-col items-start px-4 pt-2 pb-4 space-y-2 bg-[#0a192f]/95 shadow-lg border-b border-indigo-500">
+    <a href="#inicio" class="text-white font-medium hover:text-indigo-300">Inicio</a>
+    <a href="#skills" class="text-white font-medium hover:text-indigo-300">Skills</a>
+    <a href="#proyectos" class="text-white font-medium hover:text-indigo-300">Proyectos</a>
+    <a href="#estudios" class="text-white font-medium hover:text-indigo-300">Estudios</a>
+  </div>
+</nav>
+
 
   <div class="h-16"></div>
 
   <!-- INICIO -->
-  <section id="inicio" class="text-center px-6 py-12">
-    <img src="img/perfil.jpg" alt="Foto de Josue Fernandez Murillo" class="mx-auto w-32 h-32 rounded-full border-4 border-white mb-6" />
-    <h1 class="text-4xl font-bold mb-4">Danier Josue Fernandez Murillo</h1>
-    <p class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-200">
-      Soy un <span class="text-orange-400 font-semibold">joven apasionado</span> estudiante de último año de <span class="text-blue-400 font-semibold">Ingeniería en Sistemas</span>, con interés en <span class="text-orange-400">backend</span> y <span class="text-orange-400">frontend</span>.
-    </p>
-    <p class="max-w-3xl mx-auto text-lg text-gray-200 mt-4">
-      Busco oportunidades para <span class="text-orange-400">mejorar habilidades</span> y colaborar en proyectos que me permitan <span class="text-blue-400">crecer personal y profesionalmente</span>.
-    </p>
+<section id="inicio" class="flex flex-col items-center text-center px-4 sm:px-6 lg:px-8 pt-24 pb-16">
 
-    <!-- BOTONES -->
-    <div class="flex justify-center space-x-4 mt-8 flex-wrap">
-      <a href="mailto:danierfernandez0168@gmail.com" class="flex items-center bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200">
-        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail" class="w-5 h-5 mr-2"> Gmail
-      </a>
-      <a href="https://www.linkedin.com/in/josue-fernandez-7128b5208/" target="_blank" class="flex items-center bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-5 h-5 mr-2"> LinkedIn
-      </a>
-      <a href="https://github.com/Josue2406" target="_blank" class="flex items-center bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200">
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-5 h-5 mr-2"> GitHub
-      </a>
-      <a href="cv.pdf" target="_blank" class="flex items-center bg-red-600 text-white px-4 py-2 rounded-full shadow hover:bg-red-700">
-        <i class="fas fa-file-pdf w-5 h-5 mr-2"></i> Mi CV
-      </a>
-    </div>
-  </section>
+  <!-- Foto de perfil -->
+  <img src="img/perfil.jpg" alt="Foto de Josue Fernandez Murillo"
+       class="w-28 sm:w-32 md:w-36 lg:w-40 rounded-full border-4 border-white mb-6 shadow-md" />
+
+  <!-- Nombre -->
+  <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+    Danier Josue Fernandez Murillo
+  </h1>
+
+  <!-- Descripción -->
+  <p class="max-w-3xl text-base sm:text-lg leading-relaxed text-gray-200 mb-2">
+    Soy un <span class="text-orange-400 font-semibold">joven apasionado</span> estudiante de último año de
+    <span class="text-blue-400 font-semibold">Ingeniería en Sistemas</span>, con interés en
+    <span class="text-orange-400">backend</span> y <span class="text-orange-400">frontend</span>.
+  </p>
+
+  <p class="max-w-3xl text-base sm:text-lg text-gray-200 mt-2 mb-6">
+    Busco oportunidades para <span class="text-orange-400">mejorar habilidades</span> y colaborar en proyectos que me permitan
+    <span class="text-blue-400">crecer personal y profesionalmente</span>.
+  </p>
+
+  <!-- Botones -->
+  <div class="flex justify-center flex-wrap gap-4 mt-4">
+    <a href="mailto:danierfernandez0168@gmail.com"
+       class="flex items-center bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200 transition">
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail" class="w-5 h-5 mr-2"> Gmail
+    </a>
+
+    <a href="https://www.linkedin.com/in/josue-fernandez-7128b5208/" target="_blank"
+       class="flex items-center bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200 transition">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-5 h-5 mr-2"> LinkedIn
+    </a>
+
+    <a href="https://github.com/Josue2406" target="_blank"
+       class="flex items-center bg-white text-black px-4 py-2 rounded-full shadow hover:bg-gray-200 transition">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-5 h-5 mr-2"> GitHub
+    </a>
+
+    <a href="cv.pdf" target="_blank"
+       class="flex items-center bg-red-600 text-white px-4 py-2 rounded-full shadow hover:bg-red-700 transition">
+      <i class="fas fa-file-pdf w-5 h-5 mr-2"></i> Mi CV
+    </a>
+  </div>
+</section>
+
+
 
   <!-- Skills -->
-  <section id="skills" class="bg-[#0a2540] text-white text-center py-12">
+  <section id="skills" class="scroll-mt-24 py-12 bg-[#0a2540] text-white text-center py-12 px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl font-bold mb-10">Skills</h2>
     <div class="flex justify-center items-center">
-      <canvas width="350" height="400" id="skillsCanvas">
-        <p>Tu navegador no soporta canvas</p>
-      </canvas>
+      <canvas id="skillsCanvas" class="w-full max-w-xs h-auto mx-auto"></canvas>
+
     </div>
-    <div id="skillTags" style="display: none;">
+    <div id="skillTags" class="hidden">
       <ul>
         <!-- Íconos de skills -->
         <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="30" /></a></li>
@@ -93,11 +135,39 @@
     </div>
   </section>
 
+  <section id="estudios" class="scroll-mt-24 py-12 bg-[#0a2540] text-white text-center py-12 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl font-bold mb-10">Formación Académica & Certificados</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    
+    <!-- Certificado 1 -->
+<div class="bg-[#112d4e] p-4 rounded-lg shadow hover:shadow-lg transition">
+  <a href="certificados/ScrumFundamentalsCertified-DanierJosueFernandezMurillo-1027993.pdf" target="_blank" class="block">
+    <img src="img/Certificado.png" alt="Certificado Scrum Master" class="rounded mb-4 w-full max-h-60 object-contain hover:scale-105 transition-transform duration-300">
+  </a>
+  <h3 class="text-xl font-semibold">Scrum Master Fundamentals</h3>
+  <p class="text-sm text-gray-300">SCRUMstudy – 2024</p>
+</div>
+
+  
+
+
+    <!-- Certificado 2 -->
+    <div class="bg-[#112d4e] p-4 rounded-lg shadow hover:shadow-lg transition">
+      <img src="img/cisco-cybersecurity.jpg" alt="Certificado Ciberseguridad Cisco" class="rounded mb-4 w-full max-h-60 object-contain">
+      <h3 class="text-xl font-semibold">Ciberseguridad Básica</h3>
+      <p class="text-sm text-gray-300">Cisco Networking Academy – 2023</p>
+    </div>
+
+    <!-- Puedes añadir más -->
+  </div>
+</section>
+
+
   <!-- Proyectos -->
-  <section id="proyectos" class="bg-[#0a2540] text-white py-12 px-4">
+  <section id="proyectos" class="scroll-mt-24 py-12 bg-[#0a2540] text-white py-12 px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl font-bold text-center mb-10">Proyectos</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <!-- Proyecto 1 -->
       <div class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300">
         <img src="https://source.unsplash.com/featured/400x200?website" class="w-full h-40 object-cover" />
         <div class="p-4">
@@ -109,7 +179,6 @@
           </div>
         </div>
       </div>
-      <!-- Repite para más proyectos si deseas -->
     </div>
   </section>
 
@@ -120,6 +189,14 @@
 
   <!-- Scripts -->
   <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('mobileMenu');
+    toggle?.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
   <script src="main.js"></script>
 </body>
 </html>
