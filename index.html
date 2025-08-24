@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portafolio de Josue Fernandez Murillo,estudiante de Ingeniería en Sistemas con experiencia en desarrollo web y backend."
+      content="Portfolio of Danier Josue Fernandez Murillo, Information Systems Engineering student with experience in web development and backend."
     />
-    <title>Portafolio - Josue Fernandez Murillo</title>
+    <title>Portfolio - Danier Josue Fernandez Murillo</title>
     <link rel="icon" href="favicon.ico" />
+
+    <!-- SEO language tags -->
+    <link rel="alternate" hreflang="es" href="https://tudominio.com/index-es.html" />
+    <link rel="alternate" hreflang="en" href="https://tudominio.com/index-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://tudominio.com/index-es.html" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -18,550 +24,305 @@
     />
   </head>
 
-  <body
-    class="bg-gradient-to-b from-[#0a192f] via-[#0f2544] to-[#091e32] text-white font-sans"
-  >
+  <body class="bg-gradient-to-b from-[#0a192f] via-[#0f2544] to-[#091e32] text-white font-sans">
     <!-- Navbar -->
-    <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-[#0a192f]/70 backdrop-blur-lg shadow-lg"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <div
-            class="text-2xl font-bold text-white tracking-tight hover:scale-110 transform transition duration-300"
-          >
-            DL
-          </div>
+    
 
-          <!-- Menú en pantallas grandes -->
-          <div class="hidden md:flex space-x-6">
-            <a
-              href="#inicio"
-              class="relative text-white font-semibold hover:text-indigo-300 group"
-            >
-              <span
-                class="group-hover:translate-y-[-2px] inline-block transition"
-                >Inicio</span
-              >
-              <span
-                class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-400 group-hover:w-full transition-all duration-300"
-              ></span>
-            </a>
-            <a
-              href="#skills"
-              class="relative text-white font-semibold hover:text-indigo-300 group"
-              >Skills</a
-            >
-            <a
-              href="#estudios"
-              class="relative text-white font-semibold hover:text-indigo-300 group"
-              >Estudios</a
-            >
-            <a
-              href="#proyectos"
-              class="relative text-white font-semibold hover:text-indigo-300 group"
-              >Proyectos</a
-            >
-          </div>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a192f]/70 backdrop-blur-lg shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-white tracking-tight hover:scale-110 transform transition duration-300">
+        DL
+      </div>
 
-          <!-- Botón hamburguesa -->
-          <button
-            id="menuToggle"
-            class="md:hidden text-white text-2xl focus:outline-none"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
+      <!-- Menu desktop -->
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="relative text-white font-semibold hover:text-indigo-300 group">
+          <span class="group-hover:translate-y-[-2px] inline-block transition">Home</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-400 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#skills" class="relative text-white font-semibold hover:text-indigo-300 group">Skills</a>
+        <a href="#education" class="relative text-white font-semibold hover:text-indigo-300 group">Education</a>
+        <a href="#projects" class="relative text-white font-semibold hover:text-indigo-300 group">Projects</a>
+      </div>
 
-          <!-- País -->
-          <div class="hidden sm:flex items-center space-x-2">
-            <img
-              src="https://flagpedia.net/data/flags/h160/cr.webp"
-              alt="ES"
-              class="w-5 h-5"
-            />
-            <span class="text-sm">Costa Rica</span>
-          </div>
+      <!-- Botón hamburguesa -->
+      <button id="menuToggle"
+              class="md:hidden text-white text-2xl focus:outline-none"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- País + Botón idioma (desktop) -->
+      <div class="hidden sm:flex items-center gap-3">
+        <div class="flex items-center gap-1">
+          <img src="https://flagpedia.net/data/flags/h160/cr.webp" alt="Costa Rica" class="w-5 h-5" />
+          <span class="text-sm">Costa Rica</span>
         </div>
+
+        <!-- Un solo botón a ES (porque esta es la versión EN) -->
+        <a href="./index-es.html"
+           class="flex items-center gap-2 px-3 py-1 rounded-full border border-pink-400 text-pink-400 hover:bg-pink-400/10 transition"
+           aria-label="Ver sitio en Español">
+          🇨🇷 <span class="hidden md:inline">ES</span>
+        </a>
       </div>
+    </div>
+  </div>
 
-      <!-- Menú móvil (solo uno, y fuera del div .h-16) -->
-      <div
-        id="mobileMenu"
-        class="md:hidden hidden flex flex-col items-start px-4 pt-2 pb-4 space-y-2 bg-[#0a192f]/95 shadow-lg border-b border-indigo-500"
-      >
-        <a href="#inicio" class="text-white font-medium hover:text-indigo-300"
-          >Inicio</a
-        >
-        <a href="#skills" class="text-white font-medium hover:text-indigo-300"
-          >Skills</a
-        >
-        <a
-          href="#proyectos"
-          class="text-white font-medium hover:text-indigo-300"
-          >Proyectos</a
-        >
-        <a href="#estudios" class="text-white font-medium hover:text-indigo-300"
-          >Estudios</a
-        >
-      </div>
-    </nav>
+  
 
-    <div class="h-16"></div>
+  <!-- Menú móvil -->
+<div id="mobileMenu"
+     class="md:hidden hidden absolute top-16 left-0 right-0 z-40
+            flex flex-col items-start px-4 pt-2 pb-4 space-y-2
+            bg-[#0a192f]/95 shadow-lg border-b border-indigo-500">
+    <a href="#home" class="text-white font-medium hover:text-indigo-300">Home</a>
+    <a href="#skills" class="text-white font-medium hover:text-indigo-300">Skills</a>
+    <a href="#projects" class="text-white font-medium hover:text-indigo-300">Projects</a>
+    <a href="#education" class="text-white font-medium hover:text-indigo-300">Education</a>
 
-    <!-- INICIO -->
-    <section
-      id="inicio"
-      class="flex flex-col items-center text-center px-4 sm:px-6 lg:px-8 pt-24 pb-16"
-    >
-      <!-- Foto de perfil -->
-      <img
-        src="img/perfil.jpg"
-        alt="Foto de Josue Fernandez Murillo"
-        class="w-28 sm:w-32 md:w-36 lg:w-40 rounded-full border-4 border-white mb-6 shadow-md"
-      />
+    <!-- Botón idioma (móvil) -->
+    <div class="pt-3 border-t border-indigo-500 w-full">
+      <a href="./index-es.html"
+         class="flex items-center gap-2 px-3 py-2 rounded-md border border-pink-400 text-pink-400 hover:bg-pink-400/10 transition w-full justify-center"
+         aria-label="Ver sitio en Español">
+        🇨🇷 ES
+      </a>
+    </div>
+  </div>
+</nav>
 
-      <!-- Nombre -->
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-        Danier Josue Fernandez Murillo
-      </h1>
+<!-- separador para que el contenido no quede debajo del nav fijo -->
+<div class="h-16"></div>
 
-      <!-- Descripción -->
-      <p
-        class="max-w-3xl text-base sm:text-lg leading-relaxed text-gray-200 mb-2"
-      >
-        Soy un
-        <span class="text-pink-400 font-semibold">joven apasionado</span>
-        estudiante de último año de
-        <span class="text-cyan-400 font-semibold"
-          >Ingeniería en Sistemas de información</span
-        >, con interés en <span class="text-pink-400">backend</span> y
-        <span class="text-pink-400">frontend</span>.
+
+
+    <!-- HOME -->
+    <section id="home" class="flex flex-col items-center text-center px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      <img src="img/perfil.jpg" alt="Profile picture of Danier Josue Fernandez Murillo"
+           class="w-28 sm:w-32 md:w-36 lg:w-40 rounded-full border-4 border-white mb-6 shadow-md" />
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Danier Josue Fernandez Murillo</h1>
+
+      <p class="max-w-3xl text-base sm:text-lg leading-relaxed text-gray-200 mb-2">
+        I am a <span class="text-pink-400 font-semibold">passionate young</span> final-year
+        <span class="text-cyan-400 font-semibold">Information Systems Engineering</span> student,
+        interested in <span class="text-pink-400">backend</span> and <span class="text-pink-400">frontend</span>.
       </p>
 
       <p class="max-w-3xl text-base sm:text-lg text-gray-200 mt-2 mb-6">
-        Busco oportunidades para
-        <span class="text-pink-400">mejorar habilidades</span> dando clases en
-        alguna institución o colaborar en proyectos que me permitan
-        <span class="text-cyan-400">crecer personal y profesionalmente</span>.
+        I am looking for opportunities to <span class="text-pink-400">enhance my skills</span> by teaching
+        or collaborating on projects that allow me to
+        <span class="text-cyan-400">grow personally and professionally</span>.
       </p>
 
-      <!-- Botones Neón combinados con fondo -->
       <div class="flex justify-center flex-wrap gap-4 mt-10">
         <!-- Gmail -->
-        <a
-          href="mailto:danierfernandez0168@gmail.com"
-          class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-cyan-400 border border-cyan-400 shadow-[0_0_10px_#00ffff] hover:shadow-[0_0_20px_#00ffff] transition-all duration-300"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/281/281769.png"
-            alt="Gmail"
-            class="w-5 h-5 mr-2"
-          />
+        <a href="mailto:danierfernandez0168@gmail.com"
+           class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-cyan-400 border border-cyan-400 shadow-[0_0_10px_#00ffff] hover:shadow-[0_0_20px_#00ffff] transition-all duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail" class="w-5 h-5 mr-2" />
           Gmail
         </a>
 
         <!-- LinkedIn -->
-        <a
-          href="https://www.linkedin.com/in/josue-fernandez-7128b5208/"
-          target="_blank"
-          class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-blue-400 border border-blue-400 shadow-[0_0_10px_#00aaff] hover:shadow-[0_0_20px_#00aaff] transition-all duration-300"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-            alt="LinkedIn"
-            class="w-5 h-5 mr-2"
-          />
+        <a href="https://www.linkedin.com/in/josue-fernandez-7128b5208/" target="_blank" rel="noopener noreferrer"
+           class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-blue-400 border border-blue-400 shadow-[0_0_10px_#00aaff] hover:shadow-[0_0_20px_#00aaff] transition-all duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-5 h-5 mr-2" />
           LinkedIn
         </a>
 
         <!-- GitHub -->
-        <a
-          href="https://github.com/Josue2406"
-          target="_blank"
-          class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-white border border-white shadow-[0_0_10px_#f1f1f1] hover:shadow-[0_0_20px_#f1f1f1] transition-all duration-300"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
-            alt="GitHub"
-            class="w-5 h-5 mr-2"
-          />
+        <a href="https://github.com/Josue2406" target="_blank" rel="noopener noreferrer"
+           class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-white border border-white shadow-[0_0_10px_#f1f1f1] hover:shadow-[0_0_20px_#f1f1f1] transition-all duration-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" class="w-5 h-5 mr-2" />
           GitHub
         </a>
 
         <!-- CV -->
-        <a
-          href="curriculim/504400168JosueFernandezM.pdf"
-          target="_blank"
-          class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-pink-400 border border-pink-400 shadow-[0_0_10px_#ff007c] hover:shadow-[0_0_20px_#ff007c] transition-all duration-300"
-        >
-          <i class="fas fa-file-pdf w-5 h-5 mr-2"></i> Mi CV
+        <a href="curriculim/504400168JosueFernandezMu.pdf" target="_blank" rel="noopener noreferrer"
+           class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-pink-400 border border-pink-400 shadow-[0_0_10px_#00d4ff] hover:shadow-[0_0_20px_#00d4ff] transition-all duration-300">
+          🇺🇸 <i class="fas fa-file-pdf w-5 h-5 mx-2"></i> CV English
+        </a>
+        <a href="curriculim/504400168JosueFernandezM.pdf" target="_blank" rel="noopener noreferrer"
+           class="flex items-center px-5 py-2 rounded-full bg-[#0a2540] text-pink-400 border border-pink-400 shadow-[0_0_10px_#ff007c] hover:shadow-[0_0_20px_#ff007c] transition-all duration-300">
+          🇨🇷 <i class="fas fa-file-pdf w-5 h-5 mx-2"></i> CV Spanish
         </a>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section
-      id="skills"
-      class="scroll-mt-24 py-12 bg-[#0a2540] text-white text-center py-12 px-4 sm:px-6 lg:px-8"
-    >
-      <h2 class="text-3xl font-bold mb-10">Skills</h2>
-      <div class="flex justify-center items-center">
-        <canvas
-          id="skillsCanvas"
-          class="w-full max-w-xs h-auto mx-auto"
-        ></canvas>
-      </div>
-      <div id="skillTags" class="hidden">
-        <ul>
-          <!-- Íconos de skills -->
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                width="30"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
-                width="30"
-            /></a>
-          </li>
-<li>
-  <a href="#">
-    <img
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-      width="30"
-    />
-  </a>
-</li>
-<li>
-  <a href="#">
-    <img
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-      width="30"
-    />
-  </a>
-</li>
+   <!-- Skills -->
+<section id="skills" class="scroll-mt-24 py-12 bg-[#0a2540] text-white text-center px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl font-bold mb-10">Technical Skills</h2>
+  <div class="flex justify-center items-center">
+    <canvas
+      id="skillsCanvas"
+      class="w-full max-w-xs h-auto mx-auto"
+    ></canvas>
+  </div>
+  <div id="skillTags" class="hidden">
+    <ul>
+      <!-- Icons stay the same, just titles in English -->
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="30" alt="HTML5" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="30" alt="CSS3" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="30" alt="JavaScript" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="30" alt="TypeScript" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" alt="React" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="30" alt="PHP" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" width="30" alt="Laravel" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="30" alt="Spring Boot" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="30" alt="C" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="30" alt="C++" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="30" alt="MySQL" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" width="30" alt=".NET" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="30" alt="Azure" /></a></li>
+      <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="30" alt="GitHub" /></a></li>
+    </ul>
+  </div>
+</section>
 
-        </ul>
-      </div>
-    </section>
-    <!-- Estudios -->
-    <section
-      id="estudios"
-      class="scroll-mt-24 py-12 bg-[#0a2540] text-white text-center py-12 px-4 sm:px-6 lg:px-8"
-    >
-      <h2 class="text-3xl font-bold mb-10">
-        Formación Académica & Certificados
-      </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <!-- Certificado 1 -->
-        <div
-          class="bg-[#112d4e] p-4 rounded-lg shadow hover:shadow-lg transition"
-        >
-          <a
-            href="certificados/ScrumFundamentalsCertified-DanierJosueFernandezMurillo-1027993.pdf"
-            target="_blank"
-            class="block"
-          >
-            <img
-              src="img/Certificado.png"
-              alt="Certificado Scrum Master"
-              class="rounded mb-4 w-full max-h-60 object-contain hover:scale-105 transition-transform duration-300"
-            />
-          </a>
-          <h3 class="text-xl font-semibold">Scrum Master Fundamentals</h3>
-          <p class="text-sm text-gray-300">SCRUMstudy – 2024</p>
-        </div>
+    <!-- Education -->
+<section id="education" class="scroll-mt-24 py-12 bg-[#0a2540] text-white text-center px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl font-bold mb-10">Education & Certificates</h2>
 
-        <!-- Certificado 2 -->
-        <div
-          class="bg-[#112d4e] p-4 rounded-lg shadow hover:shadow-lg transition"
-        >
-          <img
-            src="https://d3bixyfls5nn5n.cloudfront.net/images/entry-heroes/2021/071221_UNA_logo_full.png"
-            alt="Certificado Ciberseguridad Cisco"
-            class="rounded mb-4 w-full max-h-60 object-contain"
-          />
-          <h3 class="text-xl font-semibold">
-            Diplomado en programación de aplicaciones informaticas
-          </h3>
-          <p class="text-sm text-gray-300">
-            Universidad Nacional de Costa Rica – 2024
-          </p>
-        </div>
-
-        <!--
-         <div
-          class="bg-[#112d4e] p-4 rounded-lg shadow hover:shadow-lg transition"
-        >
-          <img
-            src="https://revistacloud.com/wp-content/uploads/2023/06/seguridad-de-las-transacciones-digitales-scaled.jpg"
-            alt="Certificado Ciberseguridad Cisco"
-            class="rounded mb-4 w-full max-h-60 object-contain"
-          />
-          <h3 class="text-xl font-semibold">
-            Ciberseguridad para funcionarios publicos
-          </h3>
-          <p class="text-sm text-gray-300">
-            Kennedy Virtual Education– 2025
-          </p>
-        </div>
-
-        
-      </div>
-    -->
-    </section>
-
-    <!-- Proyectos -->
-    <section
-      id="proyectos"
-      class="scroll-mt-24 py-12 bg-[#0a2540] text-white py-12 px-4 sm:px-6 lg:px-8"
-    >
-      <h2 class="text-3xl font-bold text-center mb-10">Proyectos</h2>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <!-- Certificate 1 -->
+    <div class="bg-[#112d4e] p-4 rounded-lg shadow hover:shadow-lg transition">
+      <a
+        href="certificados/ScrumFundamentalsCertified-DanierJosueFernandezMurillo-1027993.pdf"
+        target="_blank" rel="noopener noreferrer"
+        class="block"
       >
-        <div
-          class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300"
-        >
-          <img src="img/Paradigmas.png" class="w-full h-40 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-1">Reporte de compras</h3>
-            <p class="text-sm text-gray-300 mb-3">
-              Arquitectura de software está basada en microservicios. Para
-              ingresar al login necesitas de indenty server,por ahora solo
-              agrega al final de la ruta /dashboard/*
-            </p>
-            <div class="flex justify-between text-sm">
-              <a
-                href="https://dashboard-parad.vercel.app/"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Link</a
-              >
-              <a
-                href="https://github.com/Josue2406/DashboardParad.git"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Ver Código</a
-              >
-            </div>
-          </div>
-        </div>
+        <img
+          src="img/Certificado.png"
+          alt="Scrum Fundamentals Certificate"
+          class="rounded mb-4 w-full max-h-60 object-contain hover:scale-105 transition-transform duration-300"
+        />
+      </a>
+      <h3 class="text-xl font-semibold">Scrum Master Fundamentals</h3>
+      <p class="text-sm text-gray-300">SCRUMstudy – 2024</p>
+    </div>
 
-        <div
-          class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300"
-        >
-          <img src="img/cediam.png" class="w-full h-40 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-1">Gestión de solicitudes</h3>
-            <p class="text-sm text-gray-300 mb-3">
-              Creado para el Centro Diurno de la Tercera edad en Santa Cruz.
-              Permite a los usuarios gestionar sus solicitudes ya sea afiliarse,
-              donar, voluntario, registro del adulto mayor y encargado.
-            </p>
-            <div class="flex justify-between text-sm">
-              <a
-                href="https://p-g-ced2danier.vercel.app/"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Link</a
-              >
-              <a
-                href="https://github.com/Josue2406/pGCed2danier.git"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Ver Código</a
-              >
-            </div>
-          </div>
-        </div>
-
-        
-
-    <div
-          class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300"
-        >
-          <img src="https://i.pinimg.com/originals/b0/b8/7c/b0b87c82069043e2f6419a9ee27cde36.jpg" class="w-full h-40 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-1">Gestion hotelera UNA</h3>
-            <p class="text-sm text-gray-300 mb-3">
-              Actualmente creando un sistema para la Universidad Nacional en la sede regional chorotega con enfoque a la carrera de turismo.
-              Permite a los usuarios gestionar reservas, habitaciones y servicios del hotel, sistema basado en opera expres, skill, 
-              shymphony y invu, con laravel,php y react.
-            </p>
-            <div class="flex justify-between text-sm">
-              <a
-                href="¿https://gestionhotelerauna.vercel.app/"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Link</a
-              >
-              <a
-                href="https://github.com/Josue2406/"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Ver Código</a
-              >
-            </div>
-          </div>
-        </div>
+    <!-- Certificate 2 -->
+    <div class="bg-[#112d4e] p-4 rounded-lg shadow hover:shadow-lg transition">
+      <img
+        src="https://d3bixyfls5nn5n.cloudfront.net/images/entry-heroes/2021/071221_UNA_logo_full.png"
+        alt="UNA Diploma"
+        class="rounded mb-4 w-full max-h-60 object-contain"
+      />
+      <h3 class="text-xl font-semibold">Diploma in Software Applications Programming</h3>
+      <p class="text-sm text-gray-300">Universidad Nacional de Costa Rica – 2024</p>
+    </div>
+  </div>
+</section>
 
 
-        <div
-          class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300"
-        >
-          <img src="img/admin.png" class="w-full h-40 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-1">Admin Dashboard</h3>
-            <p class="text-sm text-gray-300 mb-3">
-              Login por roles, registro de admin y recuperación de contraseña via corre electrónico.
-              EL administrador puede aprobar,rechazar, inactivar o activar las solicitudes de los usuarios,
-              las solicitudes llegan en tiempo real.
-            </p>
-            <div class="flex justify-between text-sm">
-              <a
-                href="https://dashboard-cediam.vercel.app/"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Link</a
-              >
-              <a
-                href="https://github.com/Josue2406/"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Ver Código</a
-              >
-            </div>
-          </div>
-        </div>
+   <!-- Projects -->
+<section id="projects" class="scroll-mt-24 py-12 bg-[#0a2540] text-white px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-
-        <div
-          class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300"
-        >
-          <img src="img/chatbot.png" class="w-full h-40 object-cover" />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold mb-1">
-              Asistente virtual de programación
-            </h3>
-            <p class="text-sm text-gray-300 mb-3">
-              Laboratorio creado en Fundamentos de programación web. Un chat bot
-              que ayuda a los usuarios a resolver dudas sobre programación,
-              preguntas y respuestas son por audio.
-            </p>
-            <div class="flex justify-between text-sm">
-              <a
-                href="https://lab2-black.vercel.app/"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Link</a
-              >
-              <a
-                href="https://github.com/Josue2406/Lab2.git"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-                >Ver Código</a
-              >
-            </div>
-          </div>
+    <!-- Project 1 -->
+    <div class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300">
+      <img src="img/Paradigmas.png" class="w-full h-40 object-cover" alt="Purchases Report Project" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-1">Purchases Report</h3>
+        <p class="text-sm text-gray-300 mb-3">
+          Software architecture based on microservices. Login requires an identity server.
+          For now, add <code>/dashboard/*</code> at the end of the route.
+        </p>
+        <div class="flex justify-between text-sm">
+          <a href="https://dashboard-parad.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Live Demo</a>
+          <a href="https://github.com/Josue2406/DashboardParad.git" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">View Code</a>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300">
+      <img src="img/cediam.png" class="w-full h-40 object-cover" alt="CEDIAM Project" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-1">Request Management</h3>
+        <p class="text-sm text-gray-300 mb-3">
+          Developed for the Senior Day Care Center in Santa Cruz.
+          Allows users to manage requests such as membership, donations, volunteering,
+          and registration of seniors and their caregivers.
+        </p>
+        <div class="flex justify-between text-sm">
+          <a href="https://p-g-ced2danier.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Live Demo</a>
+          <a href="https://github.com/Josue2406/pGCed2danier.git" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300">
+      <img src="https://i.pinimg.com/originals/b0/b8/7c/b0b87c82069043e2f6419a9ee27cde36.jpg" class="w-full h-40 object-cover" alt="Hotel Management UNA" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-1">UNA Hotel Management</h3>
+        <p class="text-sm text-gray-300 mb-3">
+          Currently developing a system for the Universidad Nacional – Chorotega campus,
+          focused on the Tourism program. Allows users to manage reservations, rooms,
+          and hotel services. System inspired by Opera Express, Skill, Symphony, and Invu,
+          developed with Laravel, PHP, and React.
+        </p>
+        <div class="flex justify-between text-sm">
+          <a href="https://gestionhotelerauna.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Live Demo</a>
+          <a href="https://github.com/Josue2406/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300">
+      <img src="img/admin.png" class="w-full h-40 object-cover" alt="Admin Dashboard" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-1">Admin Dashboard</h3>
+        <p class="text-sm text-gray-300 mb-3">
+          Role-based login, admin registration, and password recovery via email.
+          The administrator can approve, reject, deactivate, or activate user requests.
+          Requests are updated in real time.
+        </p>
+        <div class="flex justify-between text-sm">
+          <a href="https://dashboard-cediam.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Live Demo</a>
+          <a href="https://github.com/Josue2406/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="bg-[#112d4e] rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300">
+      <img src="img/chatbot.png" class="w-full h-40 object-cover" alt="Programming Assistant Bot" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-1">Programming Virtual Assistant</h3>
+        <p class="text-sm text-gray-300 mb-3">
+          Lab project developed in Web Programming Fundamentals.
+          A chatbot that helps users answer programming-related questions,
+          with interactions through voice responses.
+        </p>
+        <div class="flex justify-between text-sm">
+          <a href="https://lab2-black.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Live Demo</a>
+          <a href="https://github.com/Josue2406/Lab2.git" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">View Code</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Footer -->
-    <footer class="bg-[#0a2540] text-white text-center py-6">
-      <p class="text-sm">
-        &copy; 2025 Josue Fernandez Murillo - Ingeniería en Sistemas de
-        información UNA
-      </p>
-    </footer>
+<footer class="bg-[#0a2540] text-white text-center py-6">
+  <p class="text-sm">
+    &copy; 2025 Danier Josue Fernandez Murillo - Information Systems Engineering, UNA
+  </p>
+</footer>
 
-    <!-- Scripts -->
-    <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
-    <script src="main.js"></script>
-    <script>
-      const toggle = document.getElementById("menuToggle");
-      const menu = document.getElementById("mobileMenu");
-      toggle?.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    </script>
-    <script src="main.js"></script>
+<script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+<script src="main.js"></script>
+
+
   </body>
 </html>
